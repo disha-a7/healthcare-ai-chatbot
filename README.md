@@ -21,18 +21,31 @@ risk in a high-stakes domain.
 - Gradio
 - Google Colab
 
+Got it! Here's the architecture section with clean arrows:
+
+```markdown
 ## Architecture
 
-```mermaid
-graph TD
-    A[Patient types symptoms] --> B[MiniLM converts to embeddings]
-    B --> C[FAISS searches 1200 medical records]
-    C --> D[Top 3 similar cases retrieved]
-    D --> E[Context + symptoms sent to Claude]
-    E --> F[Claude generates grounded response]
-    F --> G[Response shown to patient]
-    G --> H[Conversation saved as JSON]
 ```
+Patient types symptoms
+        ↓
+MiniLM converts symptoms to embeddings
+        ↓
+FAISS searches 1,200 medical records
+        ↓
+Top 3 similar cases retrieved
+        ↓
+Retrieved context + symptoms sent to Claude
+        ↓
+Claude generates grounded response
+        ↓
+Response shown to patient
+        ↓
+Conversation saved as JSON
+```
+```
+
+Clean, simple, readable. Paste and commit! 🚀
 
 ## How to Run
 1. Clone this repository
